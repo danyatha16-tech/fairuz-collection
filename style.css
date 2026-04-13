@@ -1,0 +1,405 @@
+:root {
+    --gold: #D4AF37;
+    --dark: #0a0a0a;
+}
+
+body {
+    background-color: var(--dark);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+.gold-gradient {
+    background: linear-gradient(45deg, #BF953F, #FCF6BA, #B38728);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+/* Nav Styles */
+.nav-link {
+    transition: color 0.3s ease;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+}
+
+.nav-link:hover {
+    color: var(--gold);
+}
+
+.nav-scrolled {
+    background: rgba(10, 10, 10, 0.95);
+    padding: 1rem 2rem;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* Hero Overlay */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, transparent 20%, var(--dark) 100%), rgba(0,0,0,0.5);
+}
+
+
+@keyframes glitch-anim {
+    0% { clip: rect(31px, 9999px, 94px, 0); }
+    100% { clip: rect(67px, 9999px, 62px, 0); }
+}
+
+@keyframes glitch-anim-2 {
+    0% { clip: rect(10px, 9999px, 30px, 0); }
+    100% { clip: rect(80px, 9999px, 100px, 0); }
+}
+
+/* Gallery & Reveal */
+.gallery-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.gallery-item:hover .gallery-img {
+    transform: scale(1.1);
+}
+
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+[data-reveal].active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Luxe Button */
+.btn-luxe {
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    transition: all 0.4s;
+    background: transparent;
+}
+
+.btn-luxe:hover {
+    background: var(--gold);
+    color: black;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+/* Efek Floating Label yang Mewah */
+.relative .label-luxe {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    color: #666;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    pointer-events: none;
+    transition: all 0.4s ease;
+}
+
+.input-luxe:focus ~ .label-luxe,
+.input-luxe:not(:placeholder-shown) ~ .label-luxe {
+    top: -15px;
+    font-size: 0.6rem;
+    color: var(--gold);
+}
+
+.input-luxe {
+    background: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 0;
+    color: white;
+    outline: none;
+    width: 100%;
+    transition: border-color 0.4s;
+}
+
+.input-luxe:focus {
+    border-bottom-color: var(--gold);
+}
+
+/* Social Media Button Styles */
+.social-icon-btn {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    color: var(--gold);
+    transition: all 0.4s;
+    font-size: 1.2rem;
+}
+
+.social-icon-btn:hover {
+    background: var(--gold);
+    color: black;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+}
+
+/* Grid & Layouting */
+#kontak h3 {
+    letter-spacing: 0.1em;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+.video-bg{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  z-index:-1;
+}
+
+.video-bg video{
+  min-width:100%;
+  min-height:100%;
+  object-fit:cover;
+}
+
+.content{
+  color:white;
+  text-align:center;
+  margin-top:200px;
+}
+ .video-bg::after{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.4);
+}
+:root {
+  --gold: #e6c77b;
+  --rose: #f8d7da;
+  --dark: #0f0f14;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0f14, #1a1a22);
+  color: white;
+}
+
+/* Soft Romantic Glow */
+.glow {
+  text-shadow: 0 0 10px rgba(230,199,123,0.4), 0 0 20px rgba(248,215,218,0.3);
+}
+
+/* Glass Effect */
+.glass {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+}
+
+/* Button Romantic */
+.btn-romantic {
+  background: linear-gradient(135deg, #e6c77b, #f8d7da);
+  color: black;
+  border-radius: 999px;
+  padding: 12px 28px;
+  font-weight: 600;
+  transition: all 0.4s ease;
+}
+
+.btn-romantic:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(230,199,123,0.3);
+}
+
+/* Hero improvement */
+.hero-title {
+  font-size: 3rem;
+  letter-spacing: 0.1em;
+}
+
+/* Card style */
+.card-romantic {
+  padding: 20px;
+  border-radius: 20px;
+  transition: all 0.4s ease;
+}
+
+.card-romantic:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+:root {
+  --gold: #e6c77b;
+  --rose: #f8d7da;
+  --dark: #0f0f14;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0f14, #1a1a22);
+  color: white;
+}
+
+/* Glow romantis */
+.glow {
+  text-shadow: 0 0 10px rgba(230,199,123,0.4),
+               0 0 20px rgba(248,215,218,0.3);
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+}
+
+/* Button romantis */
+.btn-romantic {
+  background: linear-gradient(135deg, #e6c77b, #f8d7da);
+  color: black;
+  border-radius: 999px;
+  padding: 12px 28px;
+  font-weight: 600;
+  transition: 0.4s;
+}
+
+.btn-romantic:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(230,199,123,0.3);
+}
+
+/* Card */
+.card-romantic {
+  padding: 20px;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+.card-romantic:hover {
+  transform: translateY(-8px);
+}
+/* === GALLERY AESTHETIC === */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 500px; /* lebih tinggi */
+  object-fit: cover;
+  object-position: center top; /* fokus ke wajah */
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.1);
+  filter: brightness(1);
+}
+
+/* Overlay romantic */
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  opacity: 0;
+  transition: 0.5s;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+/* Text di dalam */
+.gallery-text {
+  color: white;
+  transform: translateY(20px);
+  transition: 0.5s;
+}
+
+.gallery-item:hover .gallery-text {
+  transform: translateY(0);
+}
+/* efek blur cahaya romantis */
+#beranda::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(248,215,218,0.2), transparent);
+  top: 20%;
+  left: 30%;
+  filter: blur(100px);
+}
+/* === SPARKLE EFFECT === */
+.sparkle-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.sparkle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, #fff, transparent);
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: sparkleMove linear infinite;
+}
+
+/* animasi naik pelan */
+@keyframes sparkleMove {
+  from {
+    transform: translateY(100vh) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-10vh) scale(1);
+    opacity: 0;
+  }
+}
+/* background glow di section kontak */
+#kontak::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(248,215,218,0.15), transparent);
+  top: 10%;
+  left: 10%;
+  filter: blur(100px);
+}
+
+#kontak::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(230,199,123,0.15), transparent);
+  bottom: 10%;
+  right: 10%;
+  filter: blur(100px);
+}
+#kontak .flex:hover {
+  transform: translateX(5px);
+  transition: 0.3s;
+}
